@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Coin
+  - Teste
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1613340709
+    locked: 0
+  - name: Collectable
+    uniqueID: 3387924747
+    locked: 0
+  - name: Bullet
+    uniqueID: 1954005185
+    locked: 0
+  - name: Player
+    uniqueID: 1847962525
+    locked: 0
+  - name: Enemy
+    uniqueID: 1441048975
+    locked: 0
