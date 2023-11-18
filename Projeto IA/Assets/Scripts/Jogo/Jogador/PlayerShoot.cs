@@ -17,6 +17,7 @@ public class PlayerShoot : MonoBehaviour
     private bool _fireContinuously;
     private bool _fireSingle;
     private float _lastFireTime;
+    public Municao _municao;
     // Start is called before the first frame update
 
 
@@ -32,10 +33,19 @@ public class PlayerShoot : MonoBehaviour
         }
     }
     private void FireBullet(){
-        GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, transform.rotation);
-        Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();
-        rigidbody.velocity = _bulletSpeed * transform.up;
+        if (_municao.Score > 0){
+            GameObject bullet = Instantiate(_bulletPrefab, _gunOffset.position, transform.rotation);
+            Rigidbody2D rigidbody = bullet.GetComponent<Rigidbody2D>();
+            rigidbody.velocity = _bulletSpeed * transform.up;
+            _municao.Score -= 1;
+        }
     }
+    /*void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Ammo")){
+            Destroy(other.gameObject);
+            _municao.Score += 6;
+        }
+    }*/
     private void OnFire(InputValue inputValue){
         _fireContinuously = inputValue.isPressed;
         if (inputValue.isPressed){

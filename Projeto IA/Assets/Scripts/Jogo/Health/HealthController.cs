@@ -42,8 +42,20 @@ public class HealthController : MonoBehaviour{
             OnDamaged.Invoke();
         }
     }
-
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("AidKit")){
+            Destroy(other.gameObject);
+            if((_currentHealth + 10) <= _maximumHealth){
+                _currentHealth+=10;
+            }
+            else{
+                _currentHealth = _maximumHealth;
+            }
+            OnHealthChanged.Invoke();
+        }
+    }
     public void AddHealth(float amountToAdd){
+        
         if (_currentHealth == _maximumHealth){
             return;
         }

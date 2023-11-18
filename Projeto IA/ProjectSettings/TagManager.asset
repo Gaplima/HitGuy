@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Coin
   - Teste
+  - Ammo
+  - AidKit
+  - EndGame
   layers:
   - Default
   - TransparentFX
