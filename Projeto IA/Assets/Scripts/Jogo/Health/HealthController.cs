@@ -45,8 +45,8 @@ public class HealthController : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("AidKit")){
             Destroy(other.gameObject);
-            if((_currentHealth + 10) <= _maximumHealth){
-                _currentHealth+=10;
+            if((_currentHealth + 40) <= _maximumHealth){
+                _currentHealth+=40;
             }
             else{
                 _currentHealth = _maximumHealth;
